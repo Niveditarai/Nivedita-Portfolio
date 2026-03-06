@@ -1,0 +1,39 @@
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#1f1f1f,#3a3a3a);
+color:white;
+text-align:center;
+}
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:20px;
+background:black;
+color:white;
+}
+.skills span{
+background:#eee;
+padding:10px 15px;
+margin:5px;
+border-radius:20px;
+display:inline-block;
+}
+.project{
+border:1px solid #ddd;
+padding:20px;
+margin:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.project:hover{
+transform:scale(1.05);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
