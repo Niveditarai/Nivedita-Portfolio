@@ -1,26 +1,26 @@
-// Run everything after page loads
+// Wait until DOM fully loads
 
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
 console.log("Portfolio Loaded Successfully");
 
 
-// Boot Screen Hide after 3.5 seconds
-
-setTimeout(function () {
+// BOOT SCREEN
 
 const boot = document.getElementById("boot-screen");
 
 if (boot) {
+setTimeout(() => {
 boot.style.display = "none";
+}, 3500);
 }
 
-}, 3500);
 
+// TYPING ANIMATION
 
-// Typing Animation
+const typingElement = document.getElementById("typing");
 
-if (document.getElementById("typing")) {
+if (typingElement) {
 
 new Typed("#typing", {
 strings: [
@@ -37,17 +37,27 @@ loop: true
 }
 
 
-// Particles Background
+// PARTICLES BACKGROUND
 
 if (document.getElementById("particles-js")) {
 
 particlesJS("particles-js", {
 particles: {
-number: { value: 80 },
-color: { value: "#8b5cf6" },
-shape: { type: "circle" },
-opacity: { value: 0.5 },
-size: { value: 3 },
+number: {
+value: 80
+},
+color: {
+value: "#8b5cf6"
+},
+shape: {
+type: "circle"
+},
+opacity: {
+value: 0.5
+},
+size: {
+value: 3
+},
 move: {
 enable: true,
 speed: 2
@@ -57,25 +67,8 @@ speed: 2
 
 }
 
-});
 
-
-// Scroll to Projects Button
-
-function scrollToProjects() {
-
-const section = document.getElementById("projects");
-
-if (section) {
-section.scrollIntoView({
-behavior: "smooth"
-});
-}
-
-}
-
-
-// Smooth Scroll for Navbar Links
+// NAVBAR SMOOTH SCROLL
 
 document.querySelectorAll("nav a").forEach(anchor => {
 
@@ -86,17 +79,38 @@ e.preventDefault();
 const target = document.querySelector(this.getAttribute("href"));
 
 if (target) {
+
 target.scrollIntoView({
 behavior: "smooth"
 });
+
 }
 
 });
 
 });
 
+});
 
-// Background Music Toggle
+
+// SCROLL TO PROJECTS BUTTON
+
+function scrollToProjects() {
+
+const section = document.getElementById("projects");
+
+if (section) {
+
+section.scrollIntoView({
+behavior: "smooth"
+});
+
+}
+
+}
+
+
+// BACKGROUND MUSIC TOGGLE
 
 function toggleMusic() {
 
@@ -105,10 +119,13 @@ const music = document.getElementById("bgMusic");
 if (!music) return;
 
 if (music.paused) {
+
 music.play();
-}
-else {
+
+} else {
+
 music.pause();
+
 }
 
 }
