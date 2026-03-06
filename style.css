@@ -1,9 +1,12 @@
+/* RESET */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
 }
+
 
 /* BODY */
 
@@ -13,22 +16,23 @@ color:white;
 line-height:1.6;
 }
 
-/* HEADER */
+
+/* NAVBAR */
 
 header{
-position:fixed;
-top:0;
-width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 60px;
 background:#020617;
+position:fixed;
+width:100%;
+top:0;
 z-index:1000;
 }
 
 .logo{
-font-size:24px;
+font-size:22px;
 font-weight:bold;
 }
 
@@ -44,64 +48,61 @@ nav a:hover{
 color:#38bdf8;
 }
 
+
 /* HERO SECTION */
 
 .hero{
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
 min-height:100vh;
 padding:120px 10%;
 background:linear-gradient(135deg,#0f172a,#1e293b);
 }
 
-/* HERO TEXT */
-
-.hero-text{
-max-width:500px;
+.hero-text h1{
+font-size:40px;
+margin-bottom:10px;
 }
 
-.hero-text h1{
-font-size:50px;
+.hero-text h2{
+font-size:45px;
 margin-bottom:15px;
 }
 
 .hero-text p{
 font-size:20px;
 margin-bottom:25px;
+color:#38bdf8;
 }
+
 
 /* HERO IMAGE */
 
-.hero-image img{
+.hero-img img{
 width:280px;
 border-radius:20px;
-box-shadow:0 20px 40px rgba(0,0,0,0.4);
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
 }
 
-/* TYPING TEXT */
 
-#typing{
-color:#38bdf8;
-font-weight:bold;
-}
+/* BUTTON */
 
-/* BUTTONS */
-
-.buttons a{
-display:inline-block;
+button{
 padding:12px 25px;
-margin-right:10px;
 background:#38bdf8;
+border:none;
 color:white;
-text-decoration:none;
 border-radius:25px;
+cursor:pointer;
+font-size:15px;
 transition:0.3s;
 }
 
-.buttons a:hover{
+button:hover{
 background:#0ea5e9;
 }
+
 
 /* SECTIONS */
 
@@ -111,78 +112,114 @@ text-align:center;
 }
 
 h2{
-font-size:34px;
+font-size:32px;
 margin-bottom:40px;
 }
 
+
 /* SKILLS */
 
-.skills{
-max-width:900px;
-margin:auto;
+.skill{
+margin-bottom:25px;
+text-align:left;
+max-width:500px;
+margin-left:auto;
+margin-right:auto;
 }
 
-.skills span{
-background:#1e293b;
-padding:10px 16px;
-margin:8px;
-border-radius:20px;
-display:inline-block;
-transition:0.3s;
+.bar{
+background:#334155;
+height:10px;
+border-radius:5px;
+overflow:hidden;
 }
 
-.skills span:hover{
+.progress{
+height:10px;
 background:#38bdf8;
-color:white;
+border-radius:5px;
 }
+
+
+/* SKILL WIDTH */
+
+.python{width:90%;}
+.ml{width:85%;}
+.web{width:80%;}
+
 
 /* PROJECTS */
 
-.project{
+.projects{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.card{
 background:#1e293b;
-border:1px solid #334155;
 padding:25px;
-margin:25px auto;
 border-radius:12px;
-max-width:700px;
+width:260px;
 transition:0.3s;
 }
 
-.project:hover{
-transform:translateY(-6px);
+.card:hover{
+transform:translateY(-5px);
 box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
-.project h3{
+.card h3{
 margin-bottom:10px;
 }
 
-/* PROJECT BUTTONS */
-
-.project-links{
-margin-top:15px;
-}
-
-.project-links a{
+.card a{
 display:inline-block;
-margin:5px;
-padding:8px 16px;
-background:#38bdf8;
-color:white;
+margin-top:10px;
+color:#38bdf8;
 text-decoration:none;
-border-radius:20px;
-transition:0.3s;
 }
 
-.project-links a:hover{
-background:#0ea5e9;
+
+/* CONTACT FORM */
+
+form{
+display:flex;
+flex-direction:column;
+max-width:400px;
+margin:auto;
+gap:15px;
 }
 
-/* CONTACT */
-
-#contact p{
-margin:10px 0;
+input, textarea{
+padding:10px;
+border-radius:6px;
+border:none;
+outline:none;
 }
+
+textarea{
+height:100px;
+resize:none;
+}
+
+
+/* MUSIC BUTTON */
+
+.music-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#38bdf8;
+border:none;
+color:white;
+padding:12px 15px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+}
+
 
 /* FOOTER */
 

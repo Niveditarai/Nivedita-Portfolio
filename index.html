@@ -4,58 +4,68 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Nivedita Rai | Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 
-<!-- Typed.js library -->
+<!-- Typed.js -->
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 </head>
 
 <body>
 
+<!-- BACKGROUND MUSIC -->
+
+<audio id="bgMusic" loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<!-- NAVBAR -->
+
 <header>
 
-<h2 class="logo">Nivedita Rai</h2>
+<div class="logo">Nivedita Rai</div>
 
 <nav>
+
+<a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </header>
 
+<!-- HERO -->
 
-<!-- HERO SECTION -->
-
-<section class="hero">
+<section id="home" class="hero">
 
 <div class="hero-text">
 
-<h1>Nivedita Rai</h1>
+<h1>Hello, I'm</h1>
 
-<p>
-<span id="typing"></span>
-</p>
+<h2>Nivedita Rai</h2>
 
-<div class="buttons">
-<a href="#projects">View Projects</a>
-<a href="#contact">Contact</a>
-</div>
+<p><span id="typing"></span></p>
+
+<button onclick="scrollToProjects()">View Projects</button>
 
 </div>
 
-<div class="hero-image">
+<div class="hero-img">
+
 <img src="images/profile.jpg" alt="Nivedita Rai">
+
 </div>
 
 </section>
-
 
 <!-- ABOUT -->
 
@@ -64,43 +74,52 @@
 <h2>About Me</h2>
 
 <p>
-Hello! I'm <b>Nivedita Rai</b>, a Machine Learning enthusiast who loves
-building intelligent systems using Python and data-driven models.
-I have built projects like Customer Attrition Prediction System,
-Chatrica and AI Resume Builder.
+
+I'm Nivedita Rai, a Machine Learning enthusiast passionate about
+building intelligent systems and modern web applications.
+I enjoy building data-driven solutions and interactive web apps.
+
 </p>
 
 </section>
-
 
 <!-- SKILLS -->
 
 <section id="skills">
 
-<h2>Tech Stack</h2>
+<h2>My Skills</h2>
 
-<div class="skills">
+<div class="skill">
 
-<span>Python</span>
-<span>Data Analysis</span>
-<span>Machine Learning</span>
-<span>NumPy</span>
-<span>Pandas</span>
-<span>Seaborn</span>
-<span>Scikit-learn</span>
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-<span>MongoDB</span>
-<span>Express.js</span>
-<span>React</span>
-<span>Node.js</span>
-<span>Flask</span>
+<p>Python</p>
+
+<div class="bar">
+<div class="progress python"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>Machine Learning</p>
+
+<div class="bar">
+<div class="progress ml"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>Web Development</p>
+
+<div class="bar">
+<div class="progress web"></div>
+</div>
 
 </div>
 
 </section>
-
 
 <!-- PROJECTS -->
 
@@ -108,55 +127,41 @@ Chatrica and AI Resume Builder.
 
 <h2>Projects</h2>
 
-<div class="project">
+<div class="projects">
 
-<h3>Customer Attrition Prediction System</h3>
+<div class="card">
 
-<p>
-Machine learning model that predicts whether a customer will churn
-using behavioral and demographic data.
-</p>
+<h3>Customer Attrition Prediction</h3>
 
-<div class="project-links">
-<a href="#">GitHub</a>
-<a href="#">Live Demo</a>
-</div>
+<p>ML model predicting customer churn.</p>
+
+<a href="#" target="_blank">GitHub</a>
 
 </div>
 
-<div class="project">
+<div class="card">
 
 <h3>Chatrica</h3>
 
-<p>
-WhatsApp chat analyzer with sentiment analysis,
-emoji analysis and toxicity detection.
-</p>
+<p>WhatsApp chat analyzer with sentiment analysis.</p>
 
-<div class="project-links">
-<a href="#">GitHub</a>
-<a href="#">Live Demo</a>
-</div>
+<a href="#" target="_blank">GitHub</a>
 
 </div>
 
-<div class="project">
+<div class="card">
 
 <h3>AI Resume Builder</h3>
 
-<p>
-Web app that helps users generate professional resumes automatically.
-</p>
+<p>Automatic resume generation tool.</p>
 
-<div class="project-links">
-<a href="#">GitHub</a>
-<a href="#">Live Demo</a>
+<a href="#" target="_blank">GitHub</a>
+
 </div>
 
 </div>
 
 </section>
-
 
 <!-- CONTACT -->
 
@@ -164,12 +169,19 @@ Web app that helps users generate professional resumes automatically.
 
 <h2>Contact Me</h2>
 
-<p>Email: niveditarai095@email.com</p>
-<p>GitHub: github.com/niveditarai</p>
-<p>LinkedIn: linkedin.com/in/niveditarai</p>
+<form>
+
+<input type="text" placeholder="Name" required>
+
+<input type="email" placeholder="Email" required>
+
+<textarea placeholder="Message" required></textarea>
+
+<button type="submit">Send</button>
+
+</form>
 
 </section>
-
 
 <!-- FOOTER -->
 
@@ -179,9 +191,8 @@ Web app that helps users generate professional resumes automatically.
 
 </footer>
 
-
-<!-- Script -->
 <script src="script.js"></script>
 
 </body>
+
 </html>
