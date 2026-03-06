@@ -1,6 +1,28 @@
+// Run everything after page loads
+
+window.addEventListener("load", function(){
+
+console.log("Portfolio Loaded Successfully");
+
+
+// Boot Screen Hide
+
+setTimeout(function(){
+
+const boot = document.getElementById("boot-screen");
+
+if(boot){
+boot.style.display = "none";
+}
+
+}, 3500);
+
+
 // Typing Animation
 
-var typed = new Typed("#typing", {
+if(document.getElementById("typing")){
+
+new Typed("#typing", {
 strings: [
 "Machine Learning Enthusiast",
 "Python Developer",
@@ -12,13 +34,23 @@ backSpeed: 40,
 loop: true
 });
 
+}
+
+});
+
 
 // Smooth Scroll to Projects
 
 function scrollToProjects(){
-document.getElementById("projects").scrollIntoView({
+
+const section = document.getElementById("projects");
+
+if(section){
+section.scrollIntoView({
 behavior: "smooth"
 });
+}
+
 }
 
 
@@ -26,13 +58,17 @@ behavior: "smooth"
 
 document.querySelectorAll("nav a").forEach(anchor => {
 
-anchor.addEventListener("click", function(e) {
+anchor.addEventListener("click", function(e){
 
 e.preventDefault();
 
-document.querySelector(this.getAttribute("href")).scrollIntoView({
+const target = document.querySelector(this.getAttribute("href"));
+
+if(target){
+target.scrollIntoView({
 behavior: "smooth"
 });
+}
 
 });
 
@@ -45,6 +81,8 @@ function toggleMusic(){
 
 const music = document.getElementById("bgMusic");
 
+if(!music) return;
+
 if(music.paused){
 music.play();
 }
@@ -53,12 +91,3 @@ music.pause();
 }
 
 }
-
-
-// Page Load Console Message (optional)
-
-window.onload = function(){
-
-console.log("Portfolio Loaded Successfully");
-
-};
