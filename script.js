@@ -4,6 +4,7 @@ window.addEventListener("load", function () {
 
 console.log("Portfolio Loaded Successfully");
 
+
 // Boot Screen Hide after 3.5 seconds
 
 setTimeout(function () {
@@ -35,10 +36,31 @@ loop: true
 
 }
 
+
+// Particles Background
+
+if (document.getElementById("particles-js")) {
+
+particlesJS("particles-js", {
+particles: {
+number: { value: 80 },
+color: { value: "#8b5cf6" },
+shape: { type: "circle" },
+opacity: { value: 0.5 },
+size: { value: 3 },
+move: {
+enable: true,
+speed: 2
+}
+}
+});
+
+}
+
 });
 
 
-// Smooth Scroll to Projects
+// Scroll to Projects Button
 
 function scrollToProjects() {
 
@@ -84,7 +106,8 @@ if (!music) return;
 
 if (music.paused) {
 music.play();
-} else {
+}
+else {
 music.pause();
 }
 

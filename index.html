@@ -4,17 +4,22 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Nivedita Rai | Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 
+<!-- Typed animation -->
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<!-- Particles background -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 </head>
 
 <body>
+
 
 <!-- BOOT SCREEN -->
 
@@ -44,7 +49,7 @@
 </div>
 
 
-<!-- BACKGROUND MUSIC -->
+<!-- MUSIC -->
 
 <audio id="bgMusic" loop>
 <source src="music.mp3" type="audio/mp3">
@@ -76,21 +81,19 @@
 
 <section id="home" class="hero">
 
-<div class="hero-text">
+<div id="particles-js"></div>
 
-<h1>Hello, I'm</h1>
+<div class="hero-content">
 
-<h2>Nivedita Rai</h2>
+<h3 class="role">Machine Learning Engineer</h3>
 
-<p><span id="typing"></span></p>
+<h1 class="name">Nivedita Rai</h1>
 
-<button onclick="scrollToProjects()">View Projects</button>
+<p class="typing">
+<span id="typing"></span>
+</p>
 
-</div>
-
-<div class="hero-img">
-
-<img src="images/profile.jpg" alt="Nivedita Rai">
+<a href="#projects" class="btn">View Projects</a>
 
 </div>
 
@@ -105,9 +108,11 @@
 
 <p>
 
-I'm Nivedita Rai, a Machine Learning enthusiast passionate about
+I'm <b>Nivedita Rai</b>, a Machine Learning enthusiast passionate about
 building intelligent systems and modern web applications.
-I enjoy building data-driven solutions and interactive web apps.
+
+I enjoy working with Python, Machine Learning models and building
+data-driven applications.
 
 </p>
 
@@ -118,35 +123,20 @@ I enjoy building data-driven solutions and interactive web apps.
 
 <section id="skills">
 
-<h2>My Skills</h2>
+<h2>Tech Stack</h2>
 
-<div class="skill">
+<div class="skills-grid">
 
-<p>Python</p>
-
-<div class="bar">
-<div class="progress python"></div>
-</div>
-
-</div>
-
-<div class="skill">
-
-<p>Machine Learning</p>
-
-<div class="bar">
-<div class="progress ml"></div>
-</div>
-
-</div>
-
-<div class="skill">
-
-<p>Web Development</p>
-
-<div class="bar">
-<div class="progress web"></div>
-</div>
+<span>Python</span>
+<span>Machine Learning</span>
+<span>Data Analysis</span>
+<span>Pandas</span>
+<span>NumPy</span>
+<span>Scikit-Learn</span>
+<span>Flask</span>
+<span>React</span>
+<span>Node.js</span>
+<span>MongoDB</span>
 
 </div>
 
@@ -165,7 +155,9 @@ I enjoy building data-driven solutions and interactive web apps.
 
 <h3>Customer Attrition Prediction</h3>
 
-<p>ML model predicting customer churn.</p>
+<p>
+Machine learning model that predicts whether a customer will churn.
+</p>
 
 <a href="#" target="_blank">GitHub</a>
 
@@ -175,7 +167,9 @@ I enjoy building data-driven solutions and interactive web apps.
 
 <h3>Chatrica</h3>
 
-<p>WhatsApp chat analyzer with sentiment analysis.</p>
+<p>
+WhatsApp chat analyzer with sentiment analysis and emoji insights.
+</p>
 
 <a href="#" target="_blank">GitHub</a>
 
@@ -185,7 +179,9 @@ I enjoy building data-driven solutions and interactive web apps.
 
 <h3>AI Resume Builder</h3>
 
-<p>Automatic resume generation tool.</p>
+<p>
+Automatically generate professional resumes using AI.
+</p>
 
 <a href="#" target="_blank">GitHub</a>
 
@@ -200,17 +196,17 @@ I enjoy building data-driven solutions and interactive web apps.
 
 <section id="contact">
 
-<h2>Contact Me</h2>
+<h2>Contact</h2>
 
 <form>
 
-<input type="text" placeholder="Name" required>
+<input type="text" placeholder="Name">
 
-<input type="email" placeholder="Email" required>
+<input type="email" placeholder="Email">
 
-<textarea placeholder="Message" required></textarea>
+<textarea placeholder="Message"></textarea>
 
-<button type="submit">Send</button>
+<button type="submit">Send Message</button>
 
 </form>
 
