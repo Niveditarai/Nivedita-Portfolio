@@ -1,17 +1,16 @@
 // Run everything after page loads
 
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
 
 console.log("Portfolio Loaded Successfully");
 
+// Boot Screen Hide after 3.5 seconds
 
-// Boot Screen Hide
-
-setTimeout(function(){
+setTimeout(function () {
 
 const boot = document.getElementById("boot-screen");
 
-if(boot){
+if (boot) {
 boot.style.display = "none";
 }
 
@@ -20,7 +19,7 @@ boot.style.display = "none";
 
 // Typing Animation
 
-if(document.getElementById("typing")){
+if (document.getElementById("typing")) {
 
 new Typed("#typing", {
 strings: [
@@ -41,11 +40,11 @@ loop: true
 
 // Smooth Scroll to Projects
 
-function scrollToProjects(){
+function scrollToProjects() {
 
 const section = document.getElementById("projects");
 
-if(section){
+if (section) {
 section.scrollIntoView({
 behavior: "smooth"
 });
@@ -58,13 +57,13 @@ behavior: "smooth"
 
 document.querySelectorAll("nav a").forEach(anchor => {
 
-anchor.addEventListener("click", function(e){
+anchor.addEventListener("click", function (e) {
 
 e.preventDefault();
 
 const target = document.querySelector(this.getAttribute("href"));
 
-if(target){
+if (target) {
 target.scrollIntoView({
 behavior: "smooth"
 });
@@ -77,16 +76,15 @@ behavior: "smooth"
 
 // Background Music Toggle
 
-function toggleMusic(){
+function toggleMusic() {
 
 const music = document.getElementById("bgMusic");
 
-if(!music) return;
+if (!music) return;
 
-if(music.paused){
+if (music.paused) {
 music.play();
-}
-else{
+} else {
 music.pause();
 }
 
